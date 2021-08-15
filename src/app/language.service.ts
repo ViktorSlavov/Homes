@@ -7,7 +7,11 @@ import { Resources, ResourceStrings } from './resource-strings';
   providedIn: 'root'
 })
 export class LanguageService {
-  private currentLanguage: Language = 'EN';
+  private _currentLanguage: Language = 'EN';
+
+  public get currentLanguage(): Language {
+    return this._currentLanguage;
+  }
 
   private languageChange$ = new Subject<Language>();
   public languageChange: Observable<Language>;
@@ -17,11 +21,11 @@ export class LanguageService {
   }
 
   public getResources(type: string): ResourceStrings {
-    return Resources[this.currentLanguage][type];
+    return Resources[this._currentLanguage][type];
   }
 
   public changeLanguage(lang: Language) {
-    this.currentLanguage = lang;
+    this._currentLanguage = lang;
     this.languageChange$.next(lang);
   }
 }

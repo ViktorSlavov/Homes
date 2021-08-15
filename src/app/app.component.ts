@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from './language.service';
 
 interface Route {
   route: string;
@@ -11,6 +12,10 @@ interface Route {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(public languageService: LanguageService) {
+  }
+
   public routes: Route[] = [{
     route: '/houses',
     name: 'Houses'
