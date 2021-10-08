@@ -1,38 +1,21 @@
-<div class="backdrop"></div>
-<div class="content">
-  <div class="content__header menu">
-    <div class="logo">
-      <div class="logo__image">
-        <img src="../assets/logo.svg" alt="Kiwi standing on oval">
-      </div>
-      <div class="logo__name">
-        West Village
-      </div>
-    </div>
-    <nav class="menu__navigation">
-      <a *ngFor="let route of routes" [routerLink]="[route.route]" class="navigation__route"
-        routerLinkActive="navigation__route--active">
-        {{ route.name }}
-      </a>
-    </nav>
-    <div class="menu__languages">
-      <div [ngClass]="{
-          'menu__language--active': languageService.currentLanguage === 'BG'
-        }" class="menu__language">
-        <span class="material-icons"> language </span>
-        BG
-      </div>
-      <div [ngClass]="{
-          'menu__language--active': languageService.currentLanguage === 'EN'
-        }" class="menu__language">
-        <span class="material-icons"> language </span>
-        EN
-      </div>
-    </div>
-  </div>
-  <div class="content__body">
-    <router-outlet></router-outlet>
-  </div>
-  <div class="content__footer">
-  </div>
+<div class="app__background">
+</div>
+<div class="app">
+  <mat-sidenav-container>
+    <mat-sidenav #nav role="navigation">
+      <app-sidenav-list (clicked)="nav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-header (toggleNav)="nav.toggle()"></app-header>
+      <main>
+        <div class="app__body">
+          <div class="app__content mat-elevation-z2">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <app-footer></app-footer>
 </div>

@@ -1,0 +1,74 @@
+@import '../../styles/colors.scss';
+
+:host {
+    display: block;
+    z-index: 1;
+    width: 100%;
+    box-shadow: -1px -2px 7px #025213, 1px 1px 5px #021312;
+    
+    &__language--active {
+      color: $grey-wood;
+    }
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu {
+
+    &__navigation {
+
+        display: flex;
+        padding: 16px;
+
+        span.route {
+            padding: 4px;
+            display: flex;
+            flex-flow: column;
+            height: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $pastel-wood; 
+        }
+
+        .route__bottom {
+            width: 0px;
+            height: 1px;
+            background: $pastel-wood;
+            transition: width 0.6s linear;
+        }
+
+        .route__bottom--selected {
+            width: 100%;
+        }
+    }
+
+    &__languages {
+        user-select: none;
+        width: 8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__language {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__language--active {
+        cursor: auto;
+        filter: grayscale(1);
+    }
+}
+
+.logo {
+    height: 2rem;
+    width: 5rem;
+    &__name {
+      font-weight: 600;
+    }
+  }

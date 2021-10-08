@@ -1,7 +1,14 @@
-<div class="home">
-    <h1>Lorem ipsum</h1>
-    <h3>Lorem ipsum dorem lalala</h3>
+<div class="home__text">
+    <h1>{{ resourceStrings.title }}</h1>
+    <h3>{{ resourceStrings.subtitle }}</h3>
 
-    <p><span class="highlighted">S</span>asdkasdkaskd ka asdklasd lawd[-01j2oi2 lklk;sadj. jasdj91qu0eqo [KALSKD .` `jasdlk j;la' oo0i1j0i e1j plksdcakljs d-09oq1j.</p>
-    <p>12u90310u23joisdkla su-01-213ojpi12 =j0i13j =-i2q34oj34w4[-i2q34oj34w414=  0tjh2344 r=-35oit1    -=04i 2poijr    1-9o43j </p>
+    <p>{{ resourceStrings.paragraph1 }}</p>
+    <p>{{ resourceStrings.paragraph2 }}</p>
+    <p>{{ resourceStrings.paragraph3 | resources:'housesNumber':houses.length.toString() }}</p>
 </div>
+<div class="home__pictures">
+    <app-house-text-tile *ngFor="let entry of [].constructor(3); let i = index" [routerLink]="['/house', i]"
+        src="../../assets/0{{i+1}}.jpg" [text]="resourceStrings['houseTile' + (i + 1)]" [orientation]="i % 2 === 0 ? 'right' : 'left'">
+    </app-house-text-tile>
+</div>
+<button mat-button [routerLink]="['/houses']">{{ resourceStrings.button }}</button>

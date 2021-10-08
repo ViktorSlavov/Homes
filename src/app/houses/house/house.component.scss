@@ -1,0 +1,23 @@
+mat-card-content {
+    height: 5rem;
+    overflow-y: overlay;
+}
+
+:host {
+    user-select: none;
+    cursor: pointer;
+}
+
+mat-card-subtitle {
+    display: flex;
+    justify-content: space-between;
+
+    .sqm {
+        padding-right: 1rem;
+        border-right: 1px solid #a3a3a3;
+    }
+
+    .price-sqm {
+        padding-left: 1rem;
+    }
+}

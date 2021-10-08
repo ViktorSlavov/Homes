@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+mat-sidenav-container,mat-sidenav {
+    height: 100%;
+}
+mat-sidenav-content {
+    overflow: hidden;
+}
+
+mat-sidenav-container {
+    background: transparent;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+app-header {
+    position: fixed;
+}
+
+app-footer {
+    height: 128px;
+}
+
+.app {
+    z-index: 1;
+    position: relative;
+}
+
+.app, .app__background {
+    width: 100%;
+}
+
+.app__background {
+    height: 100%;
+    position: fixed;
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.app__body {
+    min-height: calc(100vh - 192px);
+    display: flex;
+    flex-flow: column;
+    padding: 64px 0px;
+}
+
+.app__content {
+    margin-top: 64px;
+    width: 80%;
+    background: white;
+    min-height: 80vh;
+    align-self: center;
+}

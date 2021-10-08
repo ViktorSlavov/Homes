@@ -1,0 +1,19 @@
+<div fxLayout="row" class="footer__content">
+    <div class="logo">
+        West Valley
+    </div>
+    <div fxLayout="column" class="details">
+        <div class="details__address">
+            {{ resourceStrings.address }}
+        </div>
+        <div class="details__address-location">
+            <a [href]="resourceStrings.addressLocation" target="_blank">{{ resourceStrings.addressMapsLink }}</a>
+        </div>
+        <div fxLayout="row" class="details__email">
+            <mat-icon>email</mat-icon><a href="mailto:{{resourceStrings.email}}">{{ resourceStrings.email }}</a>
+        </div>
+        <div  fxLayout="row" class="details__phone">
+            <mat-icon>phone</mat-icon>{{ resourceStrings.phone }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+@import '../../../styles/colors.scss';
+
+.logo__hill--small {
+    font-size: 80px;
+    position: absolute;
+    top: -24%;
+    color: $pastel-wood;
+    text-shadow: 1px 1px black;
+
+    &:nth-child(2) {
+        left: -17%;
+    }
+}
+
+.logo__hill--big {
+    font-size: 160px;
+    color: $pastel-wood;
+    text-shadow: 1px 1px black
+}
+
+:host {
+    height: 120px;
+    width: 240px;
+    display: flex;
+    margin-top: -60px;
+    margin-left: -100px;
+    user-select: none;
+    transform: rotateX(
+180deg) rotateY(
+180deg) scale(0.3);
+}

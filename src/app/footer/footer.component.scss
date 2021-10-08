@@ -1,0 +1,47 @@
+@import '../../styles/colors.scss';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: $deep-green;
+    color: $pastel-wood;
+}
+
+.details, .footer__content {
+    height: 100%;
+}
+
+.details {
+    justify-content: space-evenly;
+    padding: 16px;
+
+    a {
+        color: $pastel-wood;
+        text-decoration: underline;
+    }
+    a:active {
+        text-decoration: none;
+    }
+
+    .details__phone, .details__email {
+        justify-content: center;
+        align-items: center;
+        mat-icon {
+            margin: 0px 4px;
+        }
+        
+    }
+}
+
+.footer__content {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}

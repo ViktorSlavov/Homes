@@ -10,6 +10,8 @@ import { ResourceStrings } from '../resource-strings';
 export abstract class Base implements OnInit, OnDestroy {
   protected resourceKey: string = 'None';
   protected destroy$ = new Subject();
+  protected languageSubHandler = () => { this.resourceStrings = this.languageService.getResources(this.resourceKey); }
+
   public resourceStrings!: ResourceStrings;
 
   constructor(protected languageService: LanguageService) {
@@ -17,9 +19,7 @@ export abstract class Base implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.resourceStrings = this.languageService.getResources(this.resourceKey);
-    this.languageService.languageChange.pipe(takeUntil(this.destroy$)).subscribe((e) => {
-      this.resourceStrings = this.languageService.getResources(this.resourceKey);
-    });
+    this.languageService.languageChange.pipe(takeUntil(this.destroy$)).subscribe(this.languageSubHandler.bind(this));
   }
 
   ngOnDestroy(): void {

@@ -1,0 +1,41 @@
+<mat-toolbar class="content__header menu" color="accent">
+    <div fxHide.gt-xs>
+        <button mat-icon-button color="primary" (click)="toggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+    <div class="logo">
+        <div class="logo__name">
+            <app-logo-mountain></app-logo-mountain>
+        </div>
+    </div>
+    <div class="menu__navigation" fxHide.xs>
+        <span class="route" *ngFor="let route of routes">
+            <a [routerLink]="[route.route]" routerLinkActive="active" #rla="routerLinkActive">
+                {{ route.name }}
+            </a>
+            <span [ngClass]="{ 'route__bottom--selected': rla.isActive, 'route__bottom': true }"></span>
+        </span>
+        
+        <!-- <span *ngFor="let route of routes" [routerLink]="[route.route]" routerLinkActive #rla="routerLinkActive">
+            <ng-container *ngTemplateOutlet="rla.isActive ? activeRoute : inactiveRoute, context: { $implicit: route }">
+            </ng-container>
+        </span> -->
+    </div>
+    <span class="spacer"></span>
+    <div class="menu__languages">
+        <div (click)="languageService.changeLanguage('BG')" [ngClass]="{
+            'menu__language--active': languageService.currentLanguage === 'BG'
+          }" class="menu__language">
+            <mat-icon>language</mat-icon>
+            &nbsp;BG
+        </div>
+        <div (click)="languageService.changeLanguage('EN')" [ngClass]="{
+            'menu__language--active': languageService.currentLanguage === 'EN'
+          }" class="menu__language">
+            <mat-icon>language</mat-icon>
+            &nbsp;EN
+        </div>
+    </div>
+</mat-toolbar>

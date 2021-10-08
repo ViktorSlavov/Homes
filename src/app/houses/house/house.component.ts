@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostBinding, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { Base } from 'src/app/base-component/base-component.component';
+import { House } from 'src/app/common';
 
 @Component({
-  selector: 'app-house',
+  selector: 'app-house-tile',
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.scss']
 })
-export class HouseComponent implements OnInit {
+export class HouseTileComponent extends Base implements OnInit {
 
-  constructor() { }
+  // TODO: Delete this
+  @ViewChild('button', { read: ElementRef })
+  private viewButton!: ElementRef<any>
 
-  ngOnInit(): void {
+  @HostListener('click', ['$event'])
+  public handleClick(ev: any): void {
+    ev.stopPropagation();
+    this.viewButton.nativeElement.click();
   }
 
+  @HostBinding('class')
+  public houseCard = 'house__card';
+
+  public resourceKey = 'house';
+
+  @Input()
+  public house!: House;
 }

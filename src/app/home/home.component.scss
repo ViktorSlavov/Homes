@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    padding: 16px;
+    flex-flow: column;
+}
+
+.home__pictures {
+    display: flex;
+    align-self: center;
+    margin: 2rem;
+    flex-flow: column;
+    width: 100%;
+}

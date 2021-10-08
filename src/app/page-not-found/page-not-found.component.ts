@@ -7,5 +7,5 @@ import { Base } from '../base-component/base-component.component';
   styleUrls: ['./page-not-found.component.scss']
 })
 export class PageNotFoundComponent extends Base {
-  public resourceKey = 'ErrorPage'
+  public resourceKey = 'errorPage';
 }

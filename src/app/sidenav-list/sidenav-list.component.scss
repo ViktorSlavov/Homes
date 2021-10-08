@@ -1,0 +1,29 @@
+@import '../../styles/colors.scss';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: underline;
+    color: $dark-gray;
+}
+
+.logo__placeholder {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 16px;
+}
+
+mat-list {
+    width: 100%;
+}
+
+.active {
+    font-weight: 600;
+    background-color: #f3f3f3;
+    text-decoration: none;
+}

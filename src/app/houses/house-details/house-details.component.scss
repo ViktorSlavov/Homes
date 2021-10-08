@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+}
+
+.house-details {
+    &__image {
+        height: 16rem;
+
+        img {
+            height: 100%;
+        }
+    }
+}

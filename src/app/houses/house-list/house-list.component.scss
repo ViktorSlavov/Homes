@@ -1,0 +1,10 @@
+:host {
+    padding: 16px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 14rem);
+    grid-gap: 0.5rem;
+    grid-auto-flow: row;
+    justify-content: center;
+    overflow-y: overlay;
+}
