@@ -32,16 +32,8 @@ app-footer {
     position: relative;
 }
 
-.app, .app__background {
+.app, .app__image {
     width: 100%;
-}
-
-.app__background {
-    height: 100%;
-    position: fixed;
-    background-image: url('../assets/background.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .app__body {

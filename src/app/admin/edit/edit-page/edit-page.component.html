@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let pageKey of objectKeys">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{ pageKey | uppercase }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formGroups[pageKey]" (ngSubmit)="submit(pageKey)">
+                    <mat-form-field *ngFor="let entry of getKeys(inputData[pageKey])" color="accent">
+                        <mat-label>{{ entry }}</mat-label>
+                        <input type="text" matInput [formControlName]="entry">
+                    </mat-form-field>
+        
+                    <div class="button">
+                        <button type="submit" mat-button>Update</button> 
+                    </div>
+        
+                </form>
+              </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

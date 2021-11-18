@@ -20,6 +20,7 @@ export abstract class Base implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.resourceStrings = this.languageService.getResources(this.resourceKey);
     this.languageService.languageChange.pipe(takeUntil(this.destroy$)).subscribe(this.languageSubHandler.bind(this));
+    this.languageService.dataChange.pipe(takeUntil(this.destroy$)).subscribe(this.languageSubHandler.bind(this));
   }
 
   ngOnDestroy(): void {

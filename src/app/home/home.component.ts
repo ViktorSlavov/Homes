@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Base } from '../base-component/base-component.component';
 import { House } from '../common';
 import { HouseDataService } from '../house-data.service';
@@ -11,6 +10,9 @@ import { LanguageService } from '../language.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent extends Base {
+
+  @ViewChild('scrollTarget')
+  public scrollTarget!: ElementRef<any>;
 
   protected resourceKey: string = 'home';
   public houses!: House[];
@@ -25,5 +27,9 @@ export class HomeComponent extends Base {
       this.houses = ha.filter(h => h.available);
     });
     this.housesService.getData();
+  }
+
+  scrollIntoView(): void {
+    
   }
 }

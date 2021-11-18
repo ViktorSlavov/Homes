@@ -26,6 +26,8 @@ const ENResources: LocaleResources = {
         floors: 'Number of Floors'
     },
     home: {
+        imageUrl: 'background.jpg',
+        bannerText: 'West Village',
         title: 'West Valley',
         subtitle: `Your dream house - closer that you'd imagine`,
         paragraph1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit convallis dui eu rhoncus. Ut sollicitudin semper quam vulputate ullamcorper. Donec maximus posuere bibendum. Cras et ante magna. Sed iaculis aliquet eros. Praesent varius accumsan magna et molestie. Nulla facilisi. Donec ultrices sodales ipsum, vel faucibus ex. Nam tristique tristique eros, at egestas urna cursus sed.`,
@@ -37,7 +39,9 @@ const ENResources: LocaleResources = {
         houseTile4: `Lorem Ipsum Lorem`,
         button: 'See homes'
     },
-    filter: {
+    houses: {
+        imageUrl: '01.jpg',
+        bannerText: 'Project',
         filter: 'Filter',
         footage: 'Area',
         priceRange: 'Price Range',
@@ -49,6 +53,10 @@ const ENResources: LocaleResources = {
         costPerSQM: 'Per square meter',
         priceTotal: 'Total',
         backToTop: 'Back to Top'
+    },
+    aboutUs: {
+        imageUrl: '02.jpg',
+        bannerText: 'About Us'
     },
     footer: {
         address: 'Sofia, bul. Montevideo 13, floor 1, app. 1',
@@ -74,6 +82,8 @@ const BGResources: LocaleResources = {
         subtitle: 'Не можахме да открием страницата, която търсите'
     },
     home: {
+        imageUrl: 'background.jpg',
+        bannerText: 'West Village',
         title: 'Уест Валий',
         subtitle: 'Мечтаният дом - по-близко, отколкото очакваш',
         paragraph1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit convallis dui eu rhoncus. Ut sollicitudin semper quam vulputate ullamcorper. Donec maximus posuere bibendum. Cras et ante magna. Sed iaculis aliquet eros. Praesent varius accumsan magna et molestie. Nulla facilisi. Donec ultrices sodales ipsum, vel faucibus ex. Nam tristique tristique eros, at egestas urna cursus sed.`,
@@ -84,7 +94,9 @@ const BGResources: LocaleResources = {
         houseTile3: `LЛорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум Лорем Ипсум `,
         button: 'Виж къщите'
     },
-    filter: {
+    houses: {
+        imageUrl: '01.jpg',
+        bannerText: 'Проект',
         filter: 'Филтрирай',
         footage: 'Квадратура',
         priceRange: 'Ценови Диапазон',
@@ -96,6 +108,10 @@ const BGResources: LocaleResources = {
         costPerSQM: 'За квадратен метър',
         priceTotal: 'Общо',
         backToTop: 'Върни се до горе'
+    },
+    aboutUs: {
+        imageUrl: '02.jpg',
+        bannerText: 'За Нас'
     },
     footer: {
         address: 'София, бул. Монтевидео 13, ет. 1, ап. 1',

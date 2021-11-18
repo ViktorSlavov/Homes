@@ -1,14 +1,18 @@
-<div class="home__text">
-    <h1>{{ resourceStrings.title }}</h1>
-    <h3>{{ resourceStrings.subtitle }}</h3>
+<app-banner-image imageUrl="url('../assets/{{resourceStrings.imageUrl}}')" [bannerText]="resourceStrings.bannerText" (scrollDown)="scrollIntoView()"></app-banner-image>
+<div class="home__content">
+    <div #scrollTarget class="home__text">
+        <h1>{{ resourceStrings.title }}</h1>
+        <h3>{{ resourceStrings.subtitle }}</h3>
 
-    <p>{{ resourceStrings.paragraph1 }}</p>
-    <p>{{ resourceStrings.paragraph2 }}</p>
-    <p>{{ resourceStrings.paragraph3 | resources:'housesNumber':houses.length.toString() }}</p>
+        <p>{{ resourceStrings.paragraph1 }}</p>
+        <p>{{ resourceStrings.paragraph2 }}</p>
+        <p>{{ resourceStrings.paragraph3 | resources:'housesNumber':houses.length.toString() }}</p>
+    </div>
+    <div class="home__pictures">
+        <app-house-text-tile *ngFor="let entry of [].constructor(3); let i = index" [routerLink]="['/house', i]"
+            src="../../assets/0{{i+1}}.jpg" [text]="resourceStrings['houseTile' + (i + 1)]"
+            [orientation]="i % 2 === 0 ? 'right' : 'left'">
+        </app-house-text-tile>
+    </div>
+    <button mat-button [routerLink]="['/houses']">{{ resourceStrings.button }}</button>
 </div>
-<div class="home__pictures">
-    <app-house-text-tile *ngFor="let entry of [].constructor(3); let i = index" [routerLink]="['/house', i]"
-        src="../../assets/0{{i+1}}.jpg" [text]="resourceStrings['houseTile' + (i + 1)]" [orientation]="i % 2 === 0 ? 'right' : 'left'">
-    </app-house-text-tile>
-</div>
-<button mat-button [routerLink]="['/houses']">{{ resourceStrings.button }}</button>

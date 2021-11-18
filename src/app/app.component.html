@@ -1,5 +1,3 @@
-<div class="app__background">
-</div>
 <div class="app">
   <mat-sidenav-container>
     <mat-sidenav #nav role="navigation">
@@ -8,10 +6,9 @@
     <mat-sidenav-content>
       <app-header (toggleNav)="nav.toggle()"></app-header>
       <main>
+        <div class="app__image"></div>
         <div class="app__body">
-          <div class="app__content mat-elevation-z2">
             <router-outlet></router-outlet>
-          </div>
         </div>
       </main>
     </mat-sidenav-content>

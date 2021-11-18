@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Base } from '../base-component/base-component.component';
+import { Base } from '../../base-component/base-component.component';
 
 @Component({
   selector: 'app-sidenav-list',

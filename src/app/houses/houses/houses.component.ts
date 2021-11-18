@@ -15,7 +15,7 @@ import { HouseListComponent } from '../house-list/house-list.component';
 })
 export class HousesComponent extends Base implements OnInit, OnDestroy {
 
-  public resourceKey = 'filter';
+  public resourceKey = 'houses';
   public filterForm!: FormGroup;
 
   // TODO: get these from resource service
@@ -35,7 +35,7 @@ export class HousesComponent extends Base implements OnInit, OnDestroy {
   }
 
   protected languageSubHandler = () => {
-    let currentPriceIndex = this.priceOptions.findIndex((e) => e === this.filterForm?.get('price')?.value);
+    let currentPriceIndex = (this.priceOptions || []).findIndex((e) => e === this.filterForm?.get('price')?.value);
     this.resourceStrings = this.languageService.getResources(this.resourceKey);
     this.priceOptions = [this.resourceStrings.priceTotal, this.resourceStrings.costPerSQM];
     currentPriceIndex = currentPriceIndex !== -1 ? currentPriceIndex : 0;

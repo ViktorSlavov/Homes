@@ -7,5 +7,5 @@ import { Base } from '../base-component/base-component.component';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent extends Base implements OnInit {
-
+  resourceKey = 'aboutUs';
 }

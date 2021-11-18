@@ -1,0 +1,48 @@
+@import '../../../../styles/colors.scss';
+
+// .logo__hill--small {
+//     font-size: 80px;
+//     position: absolute;
+//     top: -24%;
+//     color: $pastel-wood;
+//     text-shadow: 1px 1px black;
+
+//     &:nth-child(2) {
+//         left: -17%;
+//     }
+// }
+
+// .logo__hill--big {
+//     font-size: 160px;
+//     color: $pastel-wood;
+//     text-shadow: 1px 1px black
+// }\
+
+:host {
+    display: block;
+}
+
+.mountains {
+    font-size: 2px;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    .mountain--big {
+        // margin-top: -10.5em;
+        height: 0px;
+        width: 0px;
+        border: 12em solid transparent;
+        border-bottom: 20em solid $pastel-wood--darker;
+    }
+    .mountain--small {
+        // margin-top: 5.5em;
+        margin-left: -6em;
+        height: 0px;
+        width: 0px;
+        border: 6em solid transparent;
+        border-bottom: 10em solid  $pastel-wood;
+    }
+    .mountain.mountain--small:nth-child(2) {
+        margin-left: -8em;
+    }
+}

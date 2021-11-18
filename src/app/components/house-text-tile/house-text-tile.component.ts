@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { Base } from '../base-component/base-component.component';
+import { Base } from '../../base-component/base-component.component';
 
 @Component({
   selector: 'app-house-text-tile',

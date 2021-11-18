@@ -16,7 +16,7 @@
 @import './styles/palettes.scss';
 @import './styles/colors.scss';
 
-$homes-primary: mat.define-palette($homes-palette-primary, 50);
+$homes-primary: mat.define-palette($homes-palette-primary, 100);
 $homes-accent: mat.define-palette($homes-palette-secondary, 800);
 $homes-warn: mat.define-palette(mat.$red-palette);
 

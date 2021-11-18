@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject, Subject } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { ResourceStrings } from './resource-strings';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class ContentService {
     this.content = this.content$.asObservable();
   }
 
-  getData(): void {
+  public getData(): void {
     this.content$.next();
   }
 }
