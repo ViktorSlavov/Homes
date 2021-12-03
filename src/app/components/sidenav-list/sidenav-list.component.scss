@@ -6,10 +6,10 @@
     align-items: center;
 }
 
-a {
+mat-list > a {
     font-weight: 400;
-    text-decoration: underline;
-    color: $dark-gray;
+    text-decoration: none;
+    color: $pastel-wood;
 }
 
 .logo__placeholder {
@@ -20,10 +20,12 @@ a {
 
 mat-list {
     width: 100%;
+
+    a.active {
+        font-weight: 600;
+        background-color: $pastel-wood;
+        color: $deep-green;
+        text-decoration: none;
+    }
 }
 
-.active {
-    font-weight: 600;
-    background-color: #f3f3f3;
-    text-decoration: none;
-}

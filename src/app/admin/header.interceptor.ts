@@ -13,8 +13,7 @@ export class HeaderInterceptor implements HttpInterceptor {
         console.log("HEADER INTERCEPTOR");
         if (httpRequest.url.indexOf('auth') <= 0) {
             const API_KEY = this.authService.authToken;
-            console.log(API_KEY);
-            return next.handle(httpRequest.clone({ setHeaders: { "west-village-auth": API_KEY } }));
+            return next.handle(httpRequest.clone({ setHeaders: { "Authorization": `Bearer ${API_KEY}` } }));
         }
         return next.handle(httpRequest);
         

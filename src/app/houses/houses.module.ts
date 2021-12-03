@@ -10,6 +10,7 @@ import { HouseTileComponent } from './house/house.component';
 import { SharedModule } from '../shared/shared.module';
 
 import { HouseDetailsComponent } from './house-details/house-details.component';
+import { HouseFilterComponent } from './house_filter/house-filter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HouseDetailsComponent } from './house-details/house-details.component';
     HousesComponent,
     HouseListComponent,
     HouseTileComponent,
-    HouseDetailsComponent 
+    HouseDetailsComponent,
+    HouseFilterComponent 
   ],
   imports: [
     CommonModule,

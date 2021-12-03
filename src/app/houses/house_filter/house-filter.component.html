@@ -1,0 +1,51 @@
+<form [formGroup]="filterForm">
+    <div class="houses__filter">
+        <div class="houses__criteria">
+            <div class="house__criteria-label">{{ resourceStrings.filter }} {{ resourceStrings.footage }}</div>
+            <mat-form-field appearance="standard">
+                <mat-label [attr.for]="resourceStrings.minSQM">{{ resourceStrings.minSQM }}</mat-label>
+                <input #firstInput matInput type="number" [name]="resourceStrings.minSQM" formControlName="minSQM">
+                <button *ngIf="this.filterForm.get('minSQM')?.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="this.filterForm.patchValue({ minSQM: null });">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label [attr.for]="resourceStrings.maxSQM">{{ resourceStrings.maxSQM }}</mat-label>
+                <input matInput [name]="resourceStrings.maxSQM" type="number" formControlName="maxSQM">
+                <button *ngIf="this.filterForm.get('maxSQM')?.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="this.filterForm.patchValue({ maxSQM: null });">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="houses__criteria">
+            <div class="house__criteria-label">{{ resourceStrings.filter }} {{ resourceStrings.priceRange }}</div>
+            <mat-form-field appearance="standard">
+                <mat-label [attr.for]="resourceStrings.minPrice">{{ resourceStrings.minPrice }}</mat-label>
+                <input matInput [name]="resourceStrings.minPrice" type="number" formControlName="minPrice">
+                <button *ngIf="this.filterForm.get('minPrice')?.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="this.filterForm.patchValue({ minPrice: null });">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label [attr.for]="resourceStrings.maxPrice">{{ resourceStrings.maxPrice }}</mat-label>
+                <input matInput [name]="resourceStrings.maxPrice" type="number" formControlName="maxPrice">
+                <button *ngIf="this.filterForm.get('maxPrice')?.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="this.filterForm.patchValue({ maxPrice: null });">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="houses__criteria">
+            <mat-form-field appearance="standard">
+                <mat-label>{{ resourceStrings.price }}</mat-label>
+                <mat-select formControlName="price">
+                    <mat-option *ngFor="let priceOption of priceOptions" [value]="priceOption">{{ priceOption }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</form>

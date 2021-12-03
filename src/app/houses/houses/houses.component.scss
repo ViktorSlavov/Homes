@@ -8,23 +8,6 @@
 
 
 .houses {
-    &__filter {
-        padding: 16px;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-evenly;
-    
-        .houses__criteria {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .house__criteria-label {
-            font-weight: 600;
-        }
-    }
 
     &__header {
         align-self: center;
