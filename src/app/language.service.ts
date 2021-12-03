@@ -21,6 +21,5 @@ export class LanguageService {
 
   public changeLanguage(lang: Language) {
     this._currentLanguage = lang;
-    this.languageChange$.next(lang);
   }
 }

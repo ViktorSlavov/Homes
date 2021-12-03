@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { LanguageService } from '../language.service';
 
@@ -18,6 +19,15 @@ export class HeaderComponent {
 
   public get routes() {
     return this.appComponent.routes;
+  }
+
+  public languageNavigate(lang: string): void {
+    const urlSegment = window.location.toString().split("://")[1];
+    const currentPageSegments = urlSegment.split("/");
+    const currentLang = currentPageSegments[1];
+    console.log("Current language, ", currentLang);
+    currentPageSegments[1] = lang;
+    window.location.replace([urlSegment[0], currentPageSegments.join("/")].join("://"))
   }
 
   public toggleSidenav(): void {

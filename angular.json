@@ -5,6 +5,12 @@
   "projects": {
     "homes": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "bg": "src/locales/locale-bg.json"
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -30,6 +36,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "localize": ["en", "bg"],
             "styles": [
               "src/styles.scss"
             ],
@@ -64,6 +71,15 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "bg": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "localize": ["bg"]
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +92,9 @@
             },
             "development": {
               "browserTarget": "homes:build:development"
+            },
+            "bg": {
+              "browserTarget": "homes:build:bg"
             }
           },
           "defaultConfiguration": "development"
