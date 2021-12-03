@@ -1,27 +1,57 @@
-<app-banner-image imageUrl="url('../assets/{{resourceStrings.imageUrl}}')" [bannerText]="resourceStrings.bannerText" (scrollDown)="scrollIntoView()"></app-banner-image>
-<div class="home__content">
-    <div #scrollTarget class="home__text">
-        <h1>{{ resourceStrings.title }}</h1>
-        <h3>{{ resourceStrings.subtitle }}</h3>
+<app-banner-image i18n-bannerText imageUrl="url('../assets/background.jpg')" bannerText="West Village"
+    (scrollDown)="scrollIntoView()"></app-banner-image>
+<div class="page__content">
+    <div #scrollTarget>
+        <h1 i18n>West Village</h1>
+        <h2 i18n>Your dream house - closer than you'd imagine</h2>
 
-        <h4>Something something somthing</h4>
-        <p>{{ resourceStrings.paragraph1 }}</p>
-        <p>{{ resourceStrings.paragraph2 }}</p>
-        <h4>Something something somthing</h4>
-        <p>{{ resourceStrings.paragraph3 | resources:'housesNumber':houses.length.toString() }}</p>
+        <section>
+            <h3 i18n>A place near you</h3>
+            <div class="row">
+                <div class="text">
+                    <p i18n>West village residence is located near the thriving heart of Bulgaria - only a 30 minute
+                        drive
+                        from
+                        Sofia! Located in the eastern end of Slivnitsa, the housing complex provides a rural, relaxing
+                        environment, combined with the convenience of easy travel to the biggest metropolis in Bulgaria.
+                    </p>
+                    <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
+                        vulputate.
+                        Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
+                        ultricies,
+                        neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
+                        consequat,
+                        mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
+                </div>
+                <div class="image" (click)="modal.show('../../assets/house_2.jpg')" i18n-title
+                    title="Your home - your lounge" [style.backgroundImage]="'url(../../assets/house_2.jpg)'">
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h3 class="right" i18n>A quiet retreat</h3>
+            <div class="row row--reverse">
+                <div class="text">
+                    <p i18n>Even with the bustling city nearby, West Village offers you with the peace and quiet you
+                        deserve.
+                        Fresh
+                        mountain air, cool breeze and sunshine - you'll have it all in your little cut of the valley.
+                    </p>
+                    <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
+                        vulputate.
+                        Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
+                        ultricies,
+                        neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
+                        consequat,
+                        mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
+                </div>
+                <div (click)="modal.show('../../assets/house_1.jpg')" i18n-title title="Your home - your castle"
+                    class="image" [style.backgroundImage]="'url(../../assets/house_1.jpg)'">
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="home__divider--image">
-        <img src="../../assets/01.jpg">
-    </div>
-    <div class="home__text">
-        <h4>Something something something</h4>
-        <p></p>
-    </div>
-    <div class="home__pictures">
-        <app-house-text-tile *ngFor="let entry of [].constructor(3); let i = index" [routerLink]="['/house', i]"
-            src="../../assets/0{{i+1}}.jpg" [text]="resourceStrings['houseTile' + (i + 1)]"
-            [orientation]="i % 2 === 0 ? 'right' : 'left'">
-        </app-house-text-tile>
-    </div>
-    <button mat-button [routerLink]="['/houses']">{{ resourceStrings.button }}</button>
-</div>\
+    <button mat-button [routerLink]="['/houses']" i18n>View Homes</button>
+</div>

@@ -1,0 +1,69 @@
+
+@import "../../../styles/colors.scss";
+
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal__backdrop {
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    position: absolute;
+    background: $green-black;
+    opacity: 0.9;
+}
+
+.modal__image {
+    width: 60%;
+    height: 60%;
+    z-index: 102;
+    border: 4px solid #f2edd7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+
+    button, a {
+        cursor: pointer;
+        background: none;
+        color: #f2edd7;
+        align-self: flex-start;
+        display: flex;
+        border: none;
+        text-decoration: none;
+
+        :hover {
+            border-bottom: 2px solid $pastel-wood;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .modal__image {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 760px) {
+    .modal__image {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal__image {
+        width: 90%;
+        height: 90%;
+    }
+}

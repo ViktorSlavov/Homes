@@ -12,9 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HouseTextTileComponent } from './components/house-text-tile/house-text-tile.component';
 import { LogoMountainComponent } from './components/logo/logo-mountain/logo-mountain.component';
-import { TitleCardComponent } from './components/title-card/title-card.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +24,7 @@ import { TitleCardComponent } from './components/title-card/title-card.component
     HeaderComponent,
     FooterComponent,
     SidenavListComponent,
-    HouseTextTileComponent,
-    LogoMountainComponent,
-    TitleCardComponent
+    LogoMountainComponent
   ],
   imports: [
     BrowserModule,

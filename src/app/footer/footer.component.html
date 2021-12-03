@@ -3,17 +3,17 @@
         West Valley
     </div>
     <div fxLayout="column" class="details">
-        <div class="details__address">
-            {{ resourceStrings.address }}
+        <div i18n class="details__address">
+            Sofia, bul. Montevideo 13, floor 1, app. 1
         </div>
         <div class="details__address-location">
-            <a [href]="resourceStrings.addressLocation" target="_blank">{{ resourceStrings.addressMapsLink }}</a>
+            <a i18n href="https://goo.gl/maps/d2V1ZFuk9vWuscN46" target="_blank">Find on Google Maps</a>
         </div>
         <div fxLayout="row" class="details__email">
-            <mat-icon>email</mat-icon><a href="mailto:{{resourceStrings.email}}">{{ resourceStrings.email }}</a>
+            <mat-icon>email</mat-icon><a href="mailto:offers@westvalley.com">offers@westvalley.com</a>
         </div>
-        <div  fxLayout="row" class="details__phone">
-            <mat-icon>phone</mat-icon>{{ resourceStrings.phone }}
+        <div i18n fxLayout="row" class="details__phone">
+            <mat-icon>phone</mat-icon>+35989898989
         </div>
     </div>
 </div>

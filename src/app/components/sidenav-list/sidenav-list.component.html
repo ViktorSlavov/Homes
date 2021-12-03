@@ -2,13 +2,7 @@
     West Valley
 </div>
 <mat-list>
-    <a mat-list-item routerLink="/home" routerLinkActive="active" (click)="closeNav()">
-        Home
-    </a>
-    <a mat-list-item routerLink="/about-us" routerLinkActive="active" (click)="closeNav()">
-        About Us
-    </a>
-    <a mat-list-item routerLink="/houses" routerLinkActive="active" (click)="closeNav()">
-        Houses
+    <a *ngFor="let route of routes" mat-list-item [routerLink]="route.route" routerLinkActive="active" (click)="closeNav()">
+        {{ route.name }}
     </a>
 </mat-list>

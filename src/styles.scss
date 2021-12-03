@@ -57,7 +57,30 @@ $homes-theme: mat.define-light-theme((
 html, body { height: 100%; width: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/** TODO: Logo placeholder, delete **/
+.page__content {
+  display: flex;
+  padding: 16px;
+  color: $green-black;
+  flex-flow: column;
+}
+
+// headings and paragraphs
+h3, h1 {
+  color: $deep-green;
+}
+h3 {
+  border-bottom: 2px solid $deep-green;
+  padding: 4px 24px;
+
+  .right {
+      text-align: right;
+  }
+}
+
+p {
+  text-indent: 16px;
+}
+
 
 
 .house__card {

@@ -1,0 +1,13 @@
+<ng-container *ngIf="visible">
+    <div class="modal__backdrop">
+
+    </div>
+    <div class="modal__image" [style.backgroundImage]="backgroundUrl">
+        <a [download]="title + '.jpg'" [href]="downloadUrl">
+            <mat-icon>download</mat-icon>
+        </a>
+        <button (click)="hide()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+</ng-container>
