@@ -1,0 +1,57 @@
+@import "../../styles/colors.scss";
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $deep-green;
+    background: $pastel-wood;
+    padding: 16px;
+    border-radius: 12px;
+    
+    .row {
+        display: flex;
+        width: 100%;
+
+        mat-form-field {
+            width: 100%;
+            flex-grow: 1;
+        }
+    }
+    
+
+    .row-2 {
+        mat-form-field {
+            width: 48%;
+
+            &:nth-child(1) {
+                padding-right: 2%;
+            }
+        }
+    }
+
+    mat-checkbox {
+        padding: 8px;
+
+        label {
+            .mat-checkbox-label, .mat-checkbox-layout {
+                white-space: normal !important;
+            }
+        }
+    }
+    
+
+    button {
+        margin-top: 4rem;
+        width: 8rem;
+        align-self: center;
+        font-size: 1rem;
+    }
+}

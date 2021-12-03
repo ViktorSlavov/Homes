@@ -7,7 +7,6 @@ import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { ResourcesPipe } from './resources.pipe';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
@@ -20,7 +19,6 @@ import { LogoMountainComponent } from './components/logo/logo-mountain/logo-moun
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    ResourcesPipe,
     HeaderComponent,
     FooterComponent,
     SidenavListComponent,
