@@ -8,6 +8,7 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
+          "en": "src/locales/locale-en.json",
           "bg": "src/locales/locale-bg.json"
         }
       },
@@ -62,7 +63,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": ["en", "bg"]
             },
             "development": {
               "buildOptimizer": false,
@@ -122,6 +124,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
