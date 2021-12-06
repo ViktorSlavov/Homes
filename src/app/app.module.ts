@@ -25,7 +25,7 @@ import { LogoMountainComponent } from './components/logo/logo-mountain/logo-moun
     LogoMountainComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -23,7 +23,7 @@
 
 .modal__image {
     width: 60%;
-    height: 60%;
+    height: 80%;
     z-index: 102;
     border: 4px solid #f2edd7;
     background-size: cover;
@@ -52,14 +52,14 @@
 @media (max-width: 1000px) {
     .modal__image {
         width: 70%;
-        height: 70%;
+        height: 90%;
     }
 }
 
 @media (max-width: 760px) {
     .modal__image {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
     }
 }
 
