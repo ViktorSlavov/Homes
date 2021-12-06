@@ -1,6 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { House } from '../common';
-import { HouseDataService } from '../house-data.service';
+import { Component } from '@angular/core';
 import { ModalService } from '../modal.service';
 
 @Component({
@@ -9,24 +7,6 @@ import { ModalService } from '../modal.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  @ViewChild('scrollTarget')
-  public scrollTarget!: ElementRef<any>;
-
-  protected resourceKey: string = 'home';
-  public houses!: House[];
-
-  constructor(protected housesService: HouseDataService, public modal: ModalService) {
-  }
-
-  public ngOnInit(): void {
-    this.housesService.houseData.subscribe((ha) => {
-      this.houses = ha.filter(h => h.available);
-    });
-    this.housesService.getData();
-  }
-
-  public scrollIntoView(): void {
-    
+  constructor(public modal: ModalService) {
   }
 }

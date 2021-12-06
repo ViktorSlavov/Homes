@@ -67,6 +67,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // headings and paragraphs
 h3, h1 {
   color: $deep-green;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -81,6 +82,94 @@ h3 {
 p {
   text-indent: 16px;
 }
+
+// Page layout
+.row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+  &--reverse {
+      flex-flow: row-reverse;
+  }
+
+  .text {
+      flex-grow: 1;
+      padding: 4px 16px;
+  }
+
+  .image {
+      cursor: pointer;
+      width: 140rem;
+      min-height: 20rem;
+      border: 2px solid $deep-green;
+      background-size: cover;
+      background-position: center;
+
+      img {
+          width: 100%;
+      }
+  }
+
+  .image--big {
+      width: 60rem;
+      min-height: 20rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .row {
+      .image {
+          width: 100rem;
+          min-height: 18rem;
+          
+      }
+
+      .text {
+          padding: 4px 12px;
+      }
+
+      .image--big {
+          width: 100rem;
+          min-height: 20rem;
+      }
+  }
+
+  section {
+      padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .row {
+      display: flex;
+      flex-flow: column-reverse;
+
+      &--reverse {
+          flex-flow: column;
+      }
+
+      .text {
+         padding: 4px;
+  text-align: justify;
+      }
+
+      .image {
+          width: 100%;
+          max-height: 15rem;
+      }
+
+      .image--big {
+          width:  100%;
+          min-height: 15rem;
+      }
+  }
+
+  section {
+      padding-bottom: 3rem;
+  }
+}
+// pade layout end
 
 // mat-checkbox white-space fix
 mat-checkbox.no-text-wrap {

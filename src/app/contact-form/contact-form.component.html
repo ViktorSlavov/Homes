@@ -1,35 +1,35 @@
-<form [formGroup]="contactForm">
-    <div class="row">
+<form [formGroup]="contactForm" (submit)="handleSubmit()">
+    <div class="row row-2">
         <mat-form-field appearance="outline" color="accent">
-            <mat-label i18n-for for="subject" i18n>Subject</mat-label>
-            <input i18n-name name="subject" type="text" matInput color="accent" formControlName="subject">
+            <mat-label i18n-for for="email" i18n>Е-поща</mat-label>
+            <input i18n-name name="email" type="text" matInput formControlName="email">
         </mat-form-field>
     </div>
     <div class="row row-2">
         <mat-form-field appearance="outline" color="accent">
-            <mat-label i18n-for for="name" i18n>Name</mat-label>
+            <mat-label i18n-for for="name" i18n>Имена</mat-label>
             <input i18n-name name="name" type="text" matInput formControlName="name">
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-            <mat-label i18n i18n-for for="phone">Phone</mat-label>
+            <mat-label i18n i18n-for for="phone">Телефон</mat-label>
             <input i18n-name name="phone" type="tel" matInput formControlName="phone">
         </mat-form-field>
     </div>
     <div class="row">
         <mat-form-field appearance="outline" color="accent">
-            <mat-label i18n i18n-for for="body">Body</mat-label>
+            <mat-label i18n i18n-for for="body">Запитване</mat-label>
             <textarea matInput i18n-name name="body" formControlName="body"></textarea>
         </mat-form-field>
     </div>
     <div class="row">
         <mat-checkbox class="no-text-wrap" color="accent" i18n-name name="consent" formControlName="consent">
             <ng-container i18n>
-                I hearby agree that my data will be processed in compliance with
+                Съгласявам се данните ми да бъдат обработвани съобразно 
             </ng-container>
-            <a i18n-href href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679&from=EN" target="_blank" i18n>GDPR regulations</a>.
+            <a i18n-href href="https://eur-lex.europa.eu/legal-content/BG/TXT/PDF/?uri=CELEX:32016R0679&from=BG" target="_blank" i18n>GDPR регулациите</a>.
         </mat-checkbox>
     </div>
     <button mat-button color="accent" type="submit" [disabled]="!contactForm.valid" i18n>
-        Submit
+        Изпрати
     </button>
 </form>

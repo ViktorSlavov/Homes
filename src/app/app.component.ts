@@ -12,6 +12,8 @@ interface Route {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
+  public title = 'West Village';
+
   @ViewChild(ImageModalComponent)
   public imageModal!: ImageModalComponent
 
@@ -27,13 +29,13 @@ export class AppComponent implements AfterViewInit {
 
   public routes: Route[] = [{
     route: '/home',
-    name: $localize`Home`
+    name: $localize`Начало`
   }, {
     route: '/houses',
-    name: $localize`Houses`
+    name: $localize`Къщите`
   }, {
     route: '/about-us',
-    name: $localize`About Us`
+    name: $localize`Контакти`
   },
   ];
 }

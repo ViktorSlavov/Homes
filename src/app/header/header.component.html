@@ -24,7 +24,8 @@
         </span> -->
     </div>
     <span class="spacer"></span>
-    <div class="menu__languages">
+    <!-- no language support for now -->
+    <div *ngIf="false" class="menu__languages">
         <div (click)="languageNavigate('BG')" tooltip="Change language to Bulgarian" class="menu__language">
             <mat-icon>language</mat-icon>
             &nbsp;BG

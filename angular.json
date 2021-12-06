@@ -6,11 +6,11 @@
     "homes": {
       "projectType": "application",
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "BG",
         "locales": {
-          "BG": {
-            "baseHref": "/BG/",
-            "translation": "src/locales/locale-bg.json"
+          "en-US": {
+            "baseHref": "/en-US/",
+            "translation": "src/locales/locale-en.json"
           }
         }
       },

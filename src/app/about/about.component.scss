@@ -1,0 +1,9 @@
+.form__container {
+    height: 100vh;
+    
+    iframe {
+        height: 100% !important;
+        max-height: unset !important;
+    }
+
+}

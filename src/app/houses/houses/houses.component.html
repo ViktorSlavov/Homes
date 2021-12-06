@@ -1,63 +1,31 @@
-<app-banner-image imageUrl="url('assets/house_3d_1.jpg')" i18n-bannerText bannerText="Project"></app-banner-image>
+<app-banner-image imageUrl="url('assets/house_3d_1.jpg')" i18n-bannerText bannerText="Къщите"></app-banner-image>
 
 <div class="page__content">
     <section>
-        <h3 i18n>Title 1 - Lorem ipsum dolor</h3>
+        <h3 i18n>ПРОЕКТ</h3>
         <div class="row">
             <div class="text">
-                <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
-                    vulputate.
-                    Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
-                    ultricies,
-                    neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
-                    consequat,
-                    mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.
-                </p>
-                <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
-                    vulputate.
-                    Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
-                    ultricies,
-                    neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
-                    consequat,
-                    mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
+                <p i18n>Къщите са проектирани на 2 етажа с 3 спални и 3 бани. На първо ниво с площ от 91.47 кв.м. е
+                    разположена дневна с трапезария и кухненски бокс от 37.66 кв.м., 2 килера и баня. На второ ниво
+                    се помещават 3-те спални и 2 бани. Към 2 от спалните са предвидени и дрешници. От 3те спални
+                    има изход към обща тераса. Всички жилищни помещения имат южно изложение с френски
+                    прозорци.</p>
             </div>
-            <div class="image" i18n-title title="Your home - your lounge"
+            <div class="image" i18n-title title="Къща от West Village" (click)="modal.show('assets/house_2.jpg')"
                 [style.backgroundImage]="'url(\'assets/house_2.jpg\')'">
             </div>
         </div>
     </section>
 
     <section>
-        <h3 class="right" i18n>Title 2 - Lorem ipsum dolor</h3>
-        <div class="row row--reverse">
-            <div class="text">
-                <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
-                    vulputate.
-                    Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
-                    ultricies,
-                    neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
-                    consequat,
-                    mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.
-                </p>
-                <p i18n>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin elementum
-                    vulputate.
-                    Donec egestas nisi sed justo accumsan placerat. Sed eleifend sit amet mi sed efficitur. Sed
-                    ultricies,
-                    neque dictum iaculis eleifend, eros lorem aliquam nisl, id maximus lacus nulla id arcu. Nunc
-                    consequat,
-                    mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
-            </div>
-            <div i18n-title title="Your home - your castle" class="image"
-                [style.backgroundImage]="'url(\'assets/house_1.jpg\')'">
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3 i18n>Contact Us</h3>
+        <h3 i18n>АРХИТЕКТУРА</h3>
         <div class="row">
-            <app-contact-form>
-            </app-contact-form>
+            <div i18n-title title="Разпределение етаж 1 от къщата" class="image" (click)="modal.show('assets/floorplan_2.jpg')"
+                [style.backgroundImage]="'url(\'assets/floorplan_2.jpg\')'">
+            </div>
+            <div i18n-title title="Разпределение етаж 2 от къщата" class="image" (click)="modal.show('assets/floorplan_1.jpg')"
+                [style.backgroundImage]="'url(\'assets/floorplan_1.jpg\')'">
+            </div>
         </div>
     </section>
 </div>
