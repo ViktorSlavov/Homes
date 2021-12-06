@@ -8,8 +8,10 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "en": "src/locales/locale-en.json",
-          "bg": "src/locales/locale-bg.json"
+          "BG": {
+            "baseHref": "/BG/",
+            "translation": "src/locales/locale-bg.json"
+          }
         }
       },
       "schematics": {
@@ -33,11 +35,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "baseHref": "/Homes",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
-            "localize": ["en", "bg"],
+            "localize": ["en-US", "BG"],
             "styles": [
               "src/styles.scss"
             ],
@@ -64,7 +67,7 @@
                 }
               ],
               "outputHashing": "all",
-              "localize": ["en", "bg"]
+              "localize": true
             },
             "development": {
               "buildOptimizer": false,
@@ -74,14 +77,14 @@
               "sourceMap": true,
               "namedChunks": true
             },
-            "bg": {
+            "BG": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "localize": ["bg"]
+              "localize": ["BG"]
             }
           },
           "defaultConfiguration": "production"
@@ -95,8 +98,8 @@
             "development": {
               "browserTarget": "homes:build:development"
             },
-            "bg": {
-              "browserTarget": "homes:build:bg"
+            "BG": {
+              "browserTarget": "homes:build:BG"
             }
           },
           "defaultConfiguration": "development"

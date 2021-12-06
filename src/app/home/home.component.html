@@ -1,4 +1,4 @@
-<app-banner-image i18n-bannerText imageUrl="url('../assets/background.jpg')" bannerText="West Village"
+<app-banner-image i18n-bannerText imageUrl="url('assets/background.jpg')" bannerText="West Village"
     (scrollDown)="scrollIntoView()"></app-banner-image>
 <div class="page__content">
     <div #scrollTarget>
@@ -23,8 +23,8 @@
                         consequat,
                         mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
                 </div>
-                <div class="image" (click)="modal.show('../../assets/house_2.jpg')" i18n-title
-                    title="Your home - your lounge" [style.backgroundImage]="'url(../../assets/house_2.jpg)'">
+                <div class="image" (click)="modal.show('assets/house_2.jpg')" i18n-title
+                    title="Your home - your lounge" [style.backgroundImage]="'url(\'assets/house_2.jpg\')'">
                 </div>
             </div>
         </section>
@@ -47,8 +47,8 @@
                         consequat,
                         mauris non blandit rhoncus, velit odio ullamcorper velit, nec vehicula.</p>
                 </div>
-                <div (click)="modal.show('../../assets/house_1.jpg')" i18n-title title="Your home - your castle"
-                    class="image" [style.backgroundImage]="'url(../../assets/house_1.jpg)'">
+                <div (click)="modal.show('assets/house_1.jpg')" i18n-title title="Your home - your castle"
+                    class="image" [style.backgroundImage]="'url(\'assets/house_1.jpg\')'">
                 </div>
             </div>
         </section>

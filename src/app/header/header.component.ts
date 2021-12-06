@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Output, EventEmitter, Inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { LanguageService } from '../language.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent {
   @Output()
   public toggleNav = new EventEmitter<void>();
 
-  constructor(public languageService: LanguageService, public appComponent: AppComponent) {
+  constructor(public languageService: LanguageService, public appComponent: AppComponent, private route: ActivatedRoute, private location: Location) {
   }
 
   public get routes() {
@@ -22,12 +23,8 @@ export class HeaderComponent {
   }
 
   public languageNavigate(lang: string): void {
-    const urlSegment = window.location.toString().split("://")[1];
-    const currentPageSegments = urlSegment.split("/");
-    const currentLang = currentPageSegments[1];
-    console.log("Current language, ", currentLang);
-    currentPageSegments[1] = lang;
-    window.location.replace([urlSegment[0], currentPageSegments.join("/")].join("://"))
+    this.location.go(`/Homes/${lang}`);
+    console.log(this.route);
   }
 
   public toggleSidenav(): void {
