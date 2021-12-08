@@ -13,7 +13,6 @@ export class ImageModalComponent{
     public get zIndex(): number {
         return this.visible ? 100 : 0;
     }
-    
 
     public visible = false;
     public show(url: string): void {

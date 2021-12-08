@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { ModalService } from 'src/app/modal.service';
 
 @Component({
@@ -7,9 +7,6 @@ import { ModalService } from 'src/app/modal.service';
   styleUrls: ['./houses.component.scss']
 })
 export class HousesComponent {
-  constructor(public modal: ModalService) {
-    
+  constructor(public modal: ModalService) {  
   }
-  @HostBinding('class.houses')
-  public cssClass = true;
 }

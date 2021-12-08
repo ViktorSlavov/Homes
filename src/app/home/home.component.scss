@@ -4,20 +4,13 @@ section {
     padding-bottom: 5rem;
 }
 
-p {
-    text-indent: 16px;
-}
-
-
-.logo {
-    width: 24rem;
-    height: 24rem;
-
+.logo--svg {
     img {
         width: 100%;
         height: 100%;
     }
 }
+
 
 .column {
     display: flex;

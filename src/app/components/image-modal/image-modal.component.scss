@@ -23,7 +23,7 @@
 
 .modal__image {
     width: 60%;
-    height: 80%;
+    height: 90%;
     z-index: 102;
     border: 4px solid #f2edd7;
     background-size: cover;
@@ -31,6 +31,10 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
+
+    &--contain {
+        background-size: contain;
+    }
 
     button, a {
         background: #13131343;
@@ -51,8 +55,8 @@
 
 @media (max-width: 1000px) {
     .modal__image {
-        width: 70%;
-        height: 90%;
+        width: 75%;
+        height: 100%;
     }
 }
 
@@ -60,12 +64,13 @@
     .modal__image {
         width: 90%;
         height: 90%;
+        background-size: contain;
     }
 }
 
 @media (max-width: 500px) {
     .modal__image {
-        width: 90%;
+        width: 100%;
         height: 90%;
     }
 }

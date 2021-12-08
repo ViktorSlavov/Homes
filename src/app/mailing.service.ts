@@ -24,6 +24,8 @@ export class MailingService {
             headers: new HttpHeaders({ 'Content-Type': 'application.json' })
         }).subscribe((e) => {
             console.log('E-mail successfully sent');
+        }, (e) => {
+            console.warn('Something went wrong. \n', e);
         });
     }
 }

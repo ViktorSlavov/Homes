@@ -5,11 +5,16 @@
         <h3 i18n>ПРОЕКТ</h3>
         <div class="row">
             <div class="text">
-                <p i18n>Къщите са проектирани на 2 етажа с 3 спални и 3 бани. На първо ниво с площ от 91.47 кв.м. е
-                    разположена дневна с трапезария и кухненски бокс от 37.66 кв.м., 2 килера и баня. На второ ниво
-                    се помещават 3-те спални и 2 бани. Към 2 от спалните са предвидени и дрешници. От 3те спални
-                    има изход към обща тераса. Всички жилищни помещения имат южно изложение с френски
-                    прозорци.</p>
+                <p i18n>Къщите са проектирани на <b>2</b> етажа с <b>3 спални</b> и <b>3 бани</b>.</p>
+                <p i18n>
+                    На първо ниво с площ от <b>91.47 кв.м.</b> е разположена дневна с трапезария и кухненски бокс от 37.66 кв.м., 2 килера и баня.</p>
+                <p i18n>
+                    На второ ниво се помещават 3-те спални и 2 бани. Към 2 от спалните са предвидени и дрешници. От 3-те спални
+                    има изход към обща тераса.
+                </p>
+                <p i18n>Всички жилищни помещения имат южно изложение с френски прозорци.
+                </p>
+
             </div>
             <div class="image" i18n-title title="Къща от West Village" (click)="modal.show('assets/house_2.jpg')"
                 [style.backgroundImage]="'url(\'assets/house_2.jpg\')'">
@@ -18,14 +23,13 @@
     </section>
 
     <section>
-        <h3 i18n>АРХИТЕКТУРА</h3>
-        <div class="row">
-            <div i18n-title title="Разпределение етаж 1 от къщата" class="image" (click)="modal.show('assets/floorplan_2.jpg')"
-                [style.backgroundImage]="'url(\'assets/floorplan_2.jpg\')'">
-            </div>
-            <div i18n-title title="Разпределение етаж 2 от къщата" class="image" (click)="modal.show('assets/floorplan_1.jpg')"
-                [style.backgroundImage]="'url(\'assets/floorplan_1.jpg\')'">
-            </div>
+        <h3 i18n>Разпределение</h3>
+        <p></p>
+        <div class="row row--padded">
+            <img alt="Разпределение етаж 1 от къщата" src="assets/floorplan_2.jpg" (click)="modal.show('assets/floorplan_2.jpg')">
+        </div>
+        <div class="row row--padded">
+            <img alt="Разпределение етаж 2 от къщата" src="assets/floorplan_1.jpg" (click)="modal.show('assets/floorplan_1.jpg')">
         </div>
     </section>
 </div>

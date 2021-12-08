@@ -55,7 +55,17 @@ $homes-theme: mat.define-light-theme((
 
 
 html, body { height: 100%; width: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'PT Serif', serif, "Helvetica Neue", sans-serif; }
+
+app-footer {
+  .logo {
+    font-family: 'PT Serif', serif;
+  }
+}
+
+.logo__placeholder {
+  font-family: 'PT Serif', serif;
+}
 
 .page__content {
   display: flex;
@@ -83,6 +93,11 @@ p {
   text-indent: 16px;
 }
 
+.logo--svg {
+  width: 12rem;
+  height: 12rem;
+}
+
 // Page layout
 .row {
   display: flex;
@@ -93,9 +108,14 @@ p {
       flex-flow: row-reverse;
   }
 
+  &--padded {
+    padding: 24px 0px;
+  }
+
   .text {
       flex-grow: 1;
       padding: 4px 16px;
+      text-align: justify;
   }
 
   .image {
@@ -109,6 +129,11 @@ p {
       img {
           width: 100%;
       }
+  }
+
+  .image--wide {
+    width: 360rem;
+    height: 25rem;
   }
 
   .image--big {

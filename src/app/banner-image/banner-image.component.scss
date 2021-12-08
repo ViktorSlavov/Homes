@@ -26,7 +26,7 @@
         flex: 1 1 auto;
         font-size: 36px;
         font-weight: 600;
-        font-family: 'Roboto';
+        font-family: 'PT Serif', serif;;
         text-align: center;
     }
     
@@ -64,19 +64,25 @@
 // }
 
 @media (max-width: 750px) {
-    .banner__text {
-        height: 96px;
-    }
-    .banner__text-header {
-        font-size: 32px;
-    }
+:host {
+    height: 75vh;
+        .banner__text {
+            height: 96px;
+        }
+        .banner__text-header {
+            font-size: 32px;
+        }
 
-    mat-icon {
-        font-size: 48px;
+        mat-icon {
+            font-size: 48px;
+        }
     }
+    
 }
 
 @media (max-width: 600px) {
+    :host {
+        height: 66vh;
     .banner__text {
         height: 64px;
     }
@@ -86,6 +92,13 @@
 
     mat-icon {
         font-size: 32px;
+    }
+}
+}
+
+@media (max-width: 600px) {
+    :host {
+        height: 50vh;
     }
 }
 

@@ -1,40 +1,35 @@
-<app-banner-image i18n-bannerText imageUrl="url('assets/background.jpg')" bannerText="West Village"
+<app-banner-image i18n-bannerText imageUrl="url('assets/house_1.jpg')" bannerText="Начало"
 ></app-banner-image>
 <div class="page__content">
     <div #scrollTarget>
-        <div class="column">
-            <div class="logo"><img src="assets/west-village.svg" title="West Village" alt="West Village"></div>
-        </div>
-        
-
         <section>
-            <h3><ng-container i18n>ЗА КОМПЛЕКСА</ng-container>&nbsp;<strong>West Village</strong></h3>
+            <div class="row">
+                <img src="assets/west-village.svg" title="West Vilalge logo" alt="West Village Logo">
+            </div>
+            <h3 i18n>ЗА КОМПЛЕКСА</h3>
             <div class="row">
                 <div class="text">
                     <p i18n>Новостроящият се комплекс West Village предлага 10 еднофамилни къщи, всяка от които
                         разполага с индивидуален двор около 350 кв.м. Къщите са еднотипни, на два етажа със застроена
                         площ от 194 кв.м.. Всяка разполага с 2 покрити паркоместа и алея, която позволява паркирането
-                        на трета кола. Проектирани са с модерна визия и оптимална функционалност. Къщите са
-                        разположени в покрайнините на град Сливница, което от една страна предоставя спокойствието и
+                        на трета кола. Проектирани са с модерна визия и оптимална функционалност.
+                    </p>
+                    <h3 i18n>Локация</h3>
+                  
+                    <p i18n>
+                        Къщите са разположени в покрайнините на град Сливница, което от една страна предоставя спокойствието и
                         тишината на малкия град, а същевременно е в близост до забързаното ежедневие на столицата.
                         Градът се намира само на 15 мин. от гр. София, пътувайки 25 км. по новата магистрала „Европа“.
                     </p>
+                    <p><a href="https://goo.gl/maps/k2Qvgiie335pedAp9?fbclid=IwAR2C-8-2WWVqIsObnighnCF_KnisGQ-tiUE0gcF541SUPMHpKE9NlzEHBFw" target="_blank" i18n>Вижте локацията</a></p>
                 </div>
-                <div class="image" (click)="modal.show('assets/house_1.jpg')" i18n-title
-                    title="Модел на къща от West Village" [style.backgroundImage]="'url(\'assets/house_1.jpg\')'">
-                </div>
-            </div>
-        </section>
-
-
-        <section>
-            <h3 i18n>РАЗПРЕДЕЛЕНИЕ</h3>
-            <div class="row">
-                <div class="image image--big" (click)="modal.show('assets/overview_1.jpg')" i18n-title
-                    title="Разпределние на къщите" [style.backgroundImage]="'url(\'assets/overview_1.jpg\')'">
+                <div class="image image--wide" (click)="modal.show('assets/overview_2.jpg')" i18n-title
+                    title="Модел на къща от West Village" [style.backgroundImage]="'url(\'assets/overview_2.jpg\')'">
                 </div>
             </div>
+
         </section>
+
     </div>
     <button mat-button [routerLink]="['/houses']" i18n>Към Къщите</button>
 </div>

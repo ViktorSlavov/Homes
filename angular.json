@@ -35,7 +35,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/Homes",
+            "baseHref": "/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -84,7 +84,7 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "localize": ["BG"]
+              "localize": false
             }
           },
           "defaultConfiguration": "production"
@@ -174,7 +174,7 @@
               "serverTarget": "homes:server:production"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
