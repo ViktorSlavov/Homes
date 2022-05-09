@@ -2,12 +2,21 @@
     <div class="modal__backdrop">
 
     </div>
-    <div class="modal__image" [style.backgroundImage]="backgroundUrl">
+    <div class="modal__image" fxHide="false" fxHide.lt-md="true" [style.backgroundImage]="backgroundUrl">
         <a [download]="title + '.jpg'" [href]="downloadUrl">
             <mat-icon>download</mat-icon>
         </a>
         <button (click)="hide()">
             <mat-icon>close</mat-icon>
         </button>
+    </div>
+    <div class="modal__image modal__image-container" fxShow.gt-sm="false" fxShow.sm>
+        <a class="modal__controls" [download]="title + '.jpg'" [href]="downloadUrl">
+            <mat-icon>download</mat-icon>
+        </a>
+        <button class="modal__controls" (click)="hide()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <img class="modal__image--large" [src]="downloadUrl">
     </div>
 </ng-container>

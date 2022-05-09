@@ -30,10 +30,16 @@ export class AppComponent implements AfterViewInit {
   public routes: Route[] = [{
     route: '/home',
     name: $localize`Начало`
-  }, {
+  },
+  {
+    route: '/location',
+    name: $localize`Локация`
+  },
+  {
     route: '/houses',
     name: $localize`Къщите`
-  }, {
+  },
+  {
     route: '/about-us',
     name: $localize`Контакти`
   },

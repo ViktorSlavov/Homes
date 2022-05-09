@@ -12,12 +12,14 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoMountainComponent } from './components/logo/logo-mountain/logo-mountain.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
+    LocationComponent,
     PageNotFoundComponent,
     HeaderComponent,
     FooterComponent,

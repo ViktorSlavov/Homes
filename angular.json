@@ -70,6 +70,7 @@
               "localize": false
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
