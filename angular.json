@@ -5,6 +5,15 @@
   "projects": {
     "homes": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "BG",
+        "locales": {
+          "en-US": {
+            "baseHref": "/en-US/",
+            "translation": "src/locales/locale-en.json"
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -20,16 +29,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/homes",
+            "outputPath": "dist/homes/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "baseHref": "/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
+            "localize": ["en-US", "BG"],
             "styles": [
               "src/styles.scss"
             ],
@@ -55,15 +66,26 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": false
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "BG": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "localize": false
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +98,9 @@
             },
             "development": {
               "browserTarget": "homes:build:development"
+            },
+            "BG": {
+              "browserTarget": "homes:build:BG"
             }
           },
           "defaultConfiguration": "development"
@@ -103,6 +128,73 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/homes/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            },
+            "BG": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "homes:build:development",
+              "serverTarget": "homes:server:development"
+            },
+            "production": {
+              "browserTarget": "homes:build:production",
+              "serverTarget": "homes:server:production"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "homes:build:production",
+              "serverTarget": "homes:server:production"
+            },
+            "development": {
+              "browserTarget": "homes:build:development",
+              "serverTarget": "homes:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

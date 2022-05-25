@@ -7,31 +7,27 @@ import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { ResourcesPipe } from './resources.pipe';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HouseTextTileComponent } from './components/house-text-tile/house-text-tile.component';
 import { LogoMountainComponent } from './components/logo/logo-mountain/logo-mountain.component';
-import { TitleCardComponent } from './components/title-card/title-card.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
+    LocationComponent,
     PageNotFoundComponent,
-    ResourcesPipe,
     HeaderComponent,
     FooterComponent,
     SidenavListComponent,
-    HouseTextTileComponent,
-    LogoMountainComponent,
-    TitleCardComponent
+    LogoMountainComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

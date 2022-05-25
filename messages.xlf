@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="BG" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7140323882914164985" datatype="html">
+        <source>Контакти</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6683005003287004810" datatype="html">
+        <source>ФОРМА ЗА КОНТАКТИ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2974832252087710923" datatype="html">
+        <source>За повече информация за проекта и за индивидуална оферта, свържете се с нас чрез формата или на обособения телефон / имейл</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6577926103809425629" datatype="html">
+        <source>Начало</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6793333083763983457" datatype="html">
+        <source>Къщите</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7315714079098881460" datatype="html">
+        <source>email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8861573502585776373" datatype="html">
+        <source>Е-поща</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3325180562659478330" datatype="html">
+        <source>name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5790873052100648061" datatype="html">
+        <source>Имена</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4425959074279579115" datatype="html">
+        <source>phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4549570742212095687" datatype="html">
+        <source>Телефон</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7588898586857509025" datatype="html">
+        <source>body</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7956082898918415301" datatype="html">
+        <source>Запитване</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431736867264288360" datatype="html">
+        <source>consent</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8374694418763555483" datatype="html">
+        <source> Съгласявам се данните ми да бъдат обработвани съобразно </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3887063499717668742" datatype="html">
+        <source>https://eur-lex.europa.eu/legal-content/BG/TXT/PDF/?uri=CELEX:32016R0679&amp;from=BG</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8244767852334571979" datatype="html">
+        <source>GDPR регулациите</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8105136300686165127" datatype="html">
+        <source> Изпрати </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5520496944968134094" datatype="html">
+        <source> &quot;Интер Пропърти Билд&quot; ЕООД </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="450635647228549186" datatype="html">
+        <source>ЗА КОМПЛЕКСА</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5529263376317938964" datatype="html">
+        <source>Стартира се изграждането на 10 еднофамилни къщи, всяка от които се разполага на парцел от около 500 кв.м. Къщите са еднотипни, на два етажа със застроена площ от 194 кв.м.. Всяка разполага с 2 покрити паркоместа и алея, която позволява паркирането на трета кола. Проектирани са с модерна визия и оптимална функционалност на застроената площ. Комплексът се намира в град Сливница в близост до столицата. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">12,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7238675446659467251" datatype="html">
+        <source>Вижте локацията</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8812320520817749153" datatype="html">
+        <source>Модел на къща от West Village</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3615769806174886766" datatype="html">
+        <source>Към Къщите</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6517144554069614326" datatype="html">
+        <source>ПРОЕКТ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1154113224780823408" datatype="html">
+        <source>Къщите са проектирани с модерна визия и максимална функционалност на помещенията.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4514243278402495100" datatype="html">
+        <source> На първо ниво са разположени дневна с трапезария и кухненски бокс, килер и санитарен възел. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6090151695872734677" datatype="html">
+        <source> На второ ниво са разположени 3 спални, 2 от които със дрешник и 2 бани. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6243746010363346047" datatype="html">
+        <source> Строителството се изпълнява с висококачествените материали на сертифицирани европейски и български производители. Вътрешните стени се завършват с „дишаща“ мазилка, а фасадите се изпълняват по сертифицирана топлоизолационна система. Заедно с трислойните стъклопакети, това осигурява намалени разходи за отопление и охлаждане на помещенията. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">15,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5600298780861471571" datatype="html">
+        <source> Всички южни фасади са предвидени с френски прозорци, което не само облекчава отоплението през зимата, а и отваря прекрасна гледка от всекидневната. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="505200213620647144" datatype="html">
+        <source>Къща от West Village</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1478147268915415688" datatype="html">
+        <source>Разпределение</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/houses/houses/houses.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1697297964380427142" datatype="html">
+        <source>Локация</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/location/location.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/location/location.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3232552979861641738" datatype="html">
+        <source>Къщите са разположени на комуникативно място в град Сливница само на 15 минути от град София, пътувайки 19 км. по новата магистрала „Европа“. До столицата може да се стигне и с редовни автобуси, които минават през не повече от 30 минути в пиковите часове, и жп линия, по която има влакове на всеки 2 часа. В процес на изграждане е скоростна жп линия, чрез която ще се стига за по-малко от 15 мин, като една от спирките на тази линия ще има топла връзка със столичното метро. Новата линия се очаква да бъда пусната още през 2024г. Комплексът е на много удобна локация, разполагаща с гледка към природата и в същото време в изключителна близост до центъра. Намира се срещу спортната зала и стадиона, само на 10 минути пеша от централния площад и училището за средно образование СУ &quot;Св. Св. Кирил и Методий&quot; и само на 5 минути от детска градина “Сливница”. Всичко това позволява да се насладите на спокойствието и тишината на малкия град, а същевременно да сте в близост до забързаното ежедневие на столицата.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/location/location.component.html</context>
+          <context context-type="linenumber">5,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1882742239692330333" datatype="html">
+        <source> Page not found - 404
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2493749847125621654" datatype="html">
+        <source> We could not find what you were looking for
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

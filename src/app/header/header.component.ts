@@ -1,45 +1,32 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Base } from '../base-component/base-component.component';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { AppComponent } from '../app.component';
 import { LanguageService } from '../language.service';
-
-interface Route {
-  route: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent extends Base implements OnInit {
+export class HeaderComponent {
 
 
   @Output()
   public toggleNav = new EventEmitter<void>();
 
-  constructor(public languageService: LanguageService) {
-    super(languageService);
+  constructor(public languageService: LanguageService, public appComponent: AppComponent) {
   }
 
-  public routes: Route[] = [{
-    route: '/houses',
-    name: 'Houses'
-  }, {
-    route: '/about-us',
-    name: 'About Us'
-  },
-  {
-    route: '/home',
-    name: 'Home'
-  }];
+  public get routes() {
+    return this.appComponent.routes;
+  }
+
+  // public languageNavigate(lang: string): void {
+  //   this.location.go(`/Homes/${lang}`);
+  //   console.log(this.route);
+  // }
 
   public toggleSidenav(): void {
     this.toggleNav.emit();
   }
 
-  public ngOnInit(): void {
-    super.ngOnInit();
-    console.log(window);
-  }
 }

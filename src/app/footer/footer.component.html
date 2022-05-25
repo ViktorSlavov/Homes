@@ -1,19 +1,20 @@
 <div fxLayout="row" class="footer__content">
     <div class="logo">
-        West Valley
+        West Village
     </div>
+    
     <div fxLayout="column" class="details">
-        <div class="details__address">
-            {{ resourceStrings.address }}
+        <div i18n class="details__address">
+            "Интер Пропърти Билд" ЕООД
         </div>
-        <div class="details__address-location">
-            <a [href]="resourceStrings.addressLocation" target="_blank">{{ resourceStrings.addressMapsLink }}</a>
-        </div>
+        <!-- <div class="details__address-location">
+            <a i18n href="https://goo.gl/maps/d2V1ZFuk9vWuscN46" target="_blank">Find on Google Maps</a>
+        </div> -->
         <div fxLayout="row" class="details__email">
-            <mat-icon>email</mat-icon><a href="mailto:{{resourceStrings.email}}">{{ resourceStrings.email }}</a>
+            <mat-icon>email</mat-icon><a href="mailto:office@west-village.eu">office@west-village.eu</a>
         </div>
-        <div  fxLayout="row" class="details__phone">
-            <mat-icon>phone</mat-icon>{{ resourceStrings.phone }}
+        <div fxLayout="row" class="details__phone">
+            <mat-icon>phone</mat-icon><ng-container i18n>0894 427 482</ng-container>
         </div>
     </div>
 </div>

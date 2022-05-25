@@ -1,13 +1,28 @@
-.home__content {
-    display: flex;
-    padding: 16px;
-    flex-flow: column;
+@import '../../styles/colors.scss';
+
+section {
+    padding-bottom: 5rem;
 }
 
-.home__pictures {
+.logo--svg {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.column {
     display: flex;
-    align-self: center;
-    margin: 2rem;
     flex-flow: column;
-    width: 100%;
+    align-items: center;
+}
+
+
+button {
+    width: 8rem;
+    align-self: center;
+    color: $pastel-wood;
+    font-size: 1rem;
+    background-color: $deep-green;
 }

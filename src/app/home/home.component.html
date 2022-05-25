@@ -1,27 +1,29 @@
-<app-banner-image imageUrl="url('../assets/{{resourceStrings.imageUrl}}')" [bannerText]="resourceStrings.bannerText" (scrollDown)="scrollIntoView()"></app-banner-image>
-<div class="home__content">
-    <div #scrollTarget class="home__text">
-        <h1>{{ resourceStrings.title }}</h1>
-        <h3>{{ resourceStrings.subtitle }}</h3>
+<app-banner-image i18n-bannerText imageUrl="url('assets/house_1.jpg')" bannerText="Начало"
+></app-banner-image>
+<div class="page__content">
+    <div #scrollTarget>
+        <section>
+            <div class="row">
+                <img src="assets/west-village.svg" title="West Vilalge logo" alt="West Village Logo">
+            </div>
+            <h3 i18n>ЗА КОМПЛЕКСА</h3>
+            <div class="row">
+                <div class="text">
+                    <p i18n>Стартира се изграждането на 10 еднофамилни къщи, всяка от които се разполага на парцел от
+                        около 500 кв.м. Къщите са еднотипни, на два етажа със застроена площ от 194 кв.м.. Всяка
+                        разполага с 2 покрити паркоместа и алея, която позволява паркирането на трета кола.
+                        Проектирани са с модерна визия и оптимална функционалност на застроената площ. Комплексът
+                        се намира в град Сливница в близост до столицата.
+                    </p>
+                    <p><a [routerLink]="['../location']" i18n>Локация</a></p>
+                </div>
+                <div class="image image--wide" (click)="modal.show('assets/overview_2.jpg')" i18n-title
+                    title="Модел на къща от West Village" [style.backgroundImage]="'url(\'assets/overview_2.jpg\')'">
+                </div>
+            </div>
 
-        <h4>Something something somthing</h4>
-        <p>{{ resourceStrings.paragraph1 }}</p>
-        <p>{{ resourceStrings.paragraph2 }}</p>
-        <h4>Something something somthing</h4>
-        <p>{{ resourceStrings.paragraph3 | resources:'housesNumber':houses.length.toString() }}</p>
+        </section>
+
     </div>
-    <div class="home__divider--image">
-        <img src="../../assets/01.jpg">
-    </div>
-    <div class="home__text">
-        <h4>Something something something</h4>
-        <p></p>
-    </div>
-    <div class="home__pictures">
-        <app-house-text-tile *ngFor="let entry of [].constructor(3); let i = index" [routerLink]="['/house', i]"
-            src="../../assets/0{{i+1}}.jpg" [text]="resourceStrings['houseTile' + (i + 1)]"
-            [orientation]="i % 2 === 0 ? 'right' : 'left'">
-        </app-house-text-tile>
-    </div>
-    <button mat-button [routerLink]="['/houses']">{{ resourceStrings.button }}</button>
-</div>\
+    <button mat-button [routerLink]="['/houses']" i18n>Към Къщите</button>
+</div>

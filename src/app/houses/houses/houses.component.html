@@ -1,15 +1,52 @@
-<app-banner-image imageUrl="url('../assets/{{resourceStrings.imageUrl}}')" [bannerText]="resourceStrings.bannerText"></app-banner-image>
-<div #houseFilter class="houses__header">
-    <app-house-filter [filterForm]="filterForm" [priceOptions]="priceOptions"></app-house-filter>
-</div>
-<div class="houses__body">
-    <app-house-list [houses]="houses | async | houseFilter
-    :filterForm.get('minSQM')!.value
-    :filterForm.get('maxSQM')!.value
-    :filterForm.get('minPrice')!.value
-    :filterForm.get('maxPrice')!.value
-    :filterForm.get('price')!.value === 'Total'"></app-house-list>
-</div>
-<div class="houses__footer">
-    <button mat-button (click)="houseFilter.focus()">{{ resourceStrings.backToTop }}&nbsp;<mat-icon>arrow_upward</mat-icon></button>
+<app-banner-image imageUrl="url('assets/house_3d_1.jpg')" i18n-bannerText bannerText="Къщите"></app-banner-image>
+
+<div class="page__content">
+    <section>
+        <h3 i18n>ПРОЕКТ</h3>
+        <div class="row">
+            <div class="text">
+                <p i18n>Къщите са проектирани с модерна визия и максимална функционалност на помещенията.</p>
+                <p i18n>
+                    На първо ниво са разположени дневна с трапезария и кухненски бокс, килер и санитарен възел.
+                <p i18n>
+                    На второ ниво са разположени 3 спални, 2 от които със дрешник и 2 бани.
+                </p>
+                <p i18n>
+                    Строителството се изпълнява с висококачествените материали на сертифицирани европейски и
+                    български производители. Вътрешните стени се завършват с „дишаща“ мазилка, а фасадите
+                    се изпълняват по сертифицирана топлоизолационна система. Заедно с трислойните стъклопакети,
+                    това осигурява намалени разходи за отопление и охлаждане на помещенията.
+                </p>
+                <p i18n>
+                    Всички южни фасади са предвидени с френски прозорци, което не само облекчава отоплението
+                    през зимата, а и отваря прекрасна гледка от всекидневната.
+                </p>
+            </div>
+            <div class="image" i18n-title title="Къща от West Village" (click)="modal.show('assets/house_2.jpg')"
+                [style.backgroundImage]="'url(\'assets/house_2.jpg\')'">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 i18n>Разпределение</h3>
+        <p>
+            Къщата от 194 кв. м. включва:</p>
+        <ul>
+            <li>37.66 кв.м. дневна с включен кухненски бокс</li>
+            <li>2 покрити паркоместа и възможност за паркиране на трета кола</li>
+            <li>3 спални</li>
+            <li>3 санитарни възела, 2 складови помещения и 2 дрешника</li>
+            <li>Тераса</li>
+            <li>Около 500 кв.м. собствен парцел</li>
+        </ul>
+        <div class="row row--padded">
+            <img alt="Разпределение етаж 1 от къщата" src="assets/floorplan_2.jpg"
+                (click)="modal.show('assets/floorplan_2.jpg')">
+        </div>
+        <div class="row row--padded">
+            <img alt="Разпределение етаж 2 от къщата" src="assets/floorplan_1.jpg"
+                (click)="modal.show('assets/floorplan_1.jpg')">
+        </div>
+    </section>
 </div>

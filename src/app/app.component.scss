@@ -28,7 +28,7 @@ app-header {
 }
 
 app-footer {
-    height: 128px;
+    height: 160px;
 }
 
 .app {
@@ -41,7 +41,7 @@ app-footer {
 }
 
 .app__body {
-    min-height: calc(100vh - 192px);
+    min-height: calc(100vh - 224px);
     display: flex;
     flex-flow: column;
     padding: 64px 0px;

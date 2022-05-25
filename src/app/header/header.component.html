@@ -24,18 +24,15 @@
         </span> -->
     </div>
     <span class="spacer"></span>
-    <div class="menu__languages">
-        <div (click)="languageService.changeLanguage('BG')" [ngClass]="{
-            'menu__language--active': languageService.currentLanguage === 'BG'
-          }" class="menu__language">
+    <!-- no language support for now -->
+    <!-- <div *ngIf="false" class="menu__languages">
+        <div (click)="languageNavigate('BG')" tooltip="Change language to Bulgarian" class="menu__language">
             <mat-icon>language</mat-icon>
             &nbsp;BG
         </div>
-        <div (click)="languageService.changeLanguage('EN')" [ngClass]="{
-            'menu__language--active': languageService.currentLanguage === 'EN'
-          }" class="menu__language">
+        <div (click)="languageNavigate('en-US')" tooltip="Change language to English" class="menu__language">
             <mat-icon>language</mat-icon>
             &nbsp;EN
         </div>
-    </div>
+    </div> -->
 </mat-toolbar>

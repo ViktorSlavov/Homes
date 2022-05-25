@@ -9,43 +9,46 @@
     background-position: center;
     background-size: cover;
     padding: 0px;
-}
 
-.banner__text {
-    background-color: #0157267f;
-    align-self: flex-end;
-    color: $pastel-wood;
-    height: 128px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.banner__text-header {
-    align-self: center;
-    flex: 1 1 auto;
-    font-size: 36px;
-    font-weight: 600;
-    font-family: 'Roboto';
-    text-align: center;
-}
-
-
-
-.banner__scroll {
-    cursor: pointer;
-    width: 4rem;
+    .banner__text {
+        background-color:rgba($deep-green, 0.6);
+        align-self: flex-end;
+        color: $pastel-wood;
+        height: 128px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
     
-    line-height: 32px;
+    h1.banner__text-header {
+        align-self: center;
+        color: $pastel-wood;
+        flex: 1 1 auto;
+        font-size: 36px;
+        font-weight: 600;
+        font-family: 'PT Serif', serif;;
+        text-align: center;
+    }
+    
+    
+    
+    .banner__scroll {
+        cursor: pointer;
+        width: 4rem;
+        
+        line-height: 32px;
+    }
+    
+    mat-icon {
+        font-size: 64px;
+        animation-name: pulse;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
 }
 
-mat-icon {
-    font-size: 64px;
-    animation-name: pulse;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+
 
 // .slide-out {
 //     animation: slide-out 2s cubic-bezier(1, 0, 0, 1);
@@ -61,19 +64,25 @@ mat-icon {
 // }
 
 @media (max-width: 750px) {
-    .banner__text {
-        height: 96px;
-    }
-    .banner__text-header {
-        font-size: 32px;
-    }
+:host {
+    height: 75vh;
+        .banner__text {
+            height: 96px;
+        }
+        .banner__text-header {
+            font-size: 32px;
+        }
 
-    mat-icon {
-        font-size: 48px;
+        mat-icon {
+            font-size: 48px;
+        }
     }
+    
 }
 
 @media (max-width: 600px) {
+    :host {
+        height: 66vh;
     .banner__text {
         height: 64px;
     }
@@ -83,6 +92,13 @@ mat-icon {
 
     mat-icon {
         font-size: 32px;
+    }
+}
+}
+
+@media (max-width: 600px) {
+    :host {
+        height: 50vh;
     }
 }
 
